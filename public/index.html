@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SCIE Assist — Classificação de risco de incêndio</title>
+<meta name="description" content="Determine a utilização-tipo, a categoria de risco e se basta a ficha de segurança ou é preciso projeto de SCIE (DL 220/2008).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header class="topo">
+  <div class="topo-in">
+    <div class="logo" aria-hidden="true">SC</div>
+    <div class="marca"><b>SCIE Assist</b><span>Segurança contra incêndio em edifícios · DL n.º 220/2008 · 12 utilizações-tipo</span></div>
+  </div>
+  <nav aria-label="Passos do processo"><div class="passos" id="passos"></div></nav>
+</header>
+
+<main>
+  <!-- PASSO 1 -->
+  <section class="ecra ativo" id="ecra-1">
+    <div class="cabeca"><h1>1. Dados do edifício e plantas</h1>
+      <p>Indique a utilização-tipo e os parâmetros do edifício. As regras vêm das tabelas do diploma; a IA nunca decide a categoria.</p></div>
+    <div class="grelha">
+      <div>
+        <div class="cartao"><h2>Identificação</h2>
+          <div class="campo"><label for="nome">Nome do projeto</label><input type="text" id="nome" placeholder="Ex.: Edifício de habitação multifamiliar — Rua X"></div>
+          <div class="duas">
+            <div class="campo"><label for="concelho">Concelho</label><input type="text" id="concelho" placeholder="Ex.: Coimbra"></div>
+            <div class="campo"><label for="morada">Freguesia / morada</label><input type="text" id="morada"></div>
+          </div>
+        </div>
+        <div class="cartao"><h2>Utilização-tipo (art. 8.º)</h2>
+          <p class="mudo peq" style="margin-top:-6px">Cada utilização-tipo mostra o estado de verificação da sua tabela. Se o edifício tiver várias utilizações-tipo, classifique cada uma separadamente.</p>
+          <div class="lista-ut" id="lista-ut" role="radiogroup" aria-label="Utilização-tipo"></div>
+        </div>
+        <div class="cartao" id="cartao-parametros" hidden><h2>Parâmetros da utilização-tipo</h2><div id="parametros"></div></div>
+      </div>
+      <div>
+        <div class="cartao"><h2>Plantas por piso</h2>
+          <div class="zona-plantas" id="zona-plantas">
+            <p style="margin:0 0 10px"><b>Arraste as plantas para aqui</b><br><span class="mudo peq">PNG, JPG ou PDF · opcional · ajudam a IA a sugerir valores no passo 2</span></p>
+            <input type="file" id="ficheiros" accept="image/png,image/jpeg,application/pdf" multiple hidden>
+            <button class="btn sec" type="button" id="btn-escolher">Escolher ficheiros</button>
+          </div>
+          <div id="lista-ficheiros"></div>
+          <p class="mudo peq" style="margin-bottom:0">Os ficheiros ficam só no seu navegador, exceto quando pede a leitura por IA (passo 2).</p>
+        </div>
+      </div>
+    </div>
+    <div class="rodape-passo"><span></span><button class="btn" type="button" data-ir="2">Seguinte: leitura da planta →</button></div>
+  </section>
+
+  <!-- PASSO 2 -->
+  <section class="ecra" id="ecra-2">
+    <div class="cabeca"><h1>2. Leitura da planta (assistida por IA)</h1>
+      <p>A IA lê as plantas e <b>sugere</b> valores. Nada é aplicado sem a sua confirmação: o técnico responsável decide.</p></div>
+    <div class="cartao"><h2>Plantas carregadas</h2><div id="p2-ficheiros"></div>
+      <div style="display:flex; gap:10px; align-items:center; margin-top:12px; flex-wrap:wrap">
+        <button class="btn" type="button" id="btn-ler">Ler plantas com IA</button>
+        <span class="mudo peq" id="p2-estado"></span>
+      </div></div>
+    <div id="p2-resultado"></div>
+    <div class="rodape-passo"><button class="btn sec" type="button" data-ir="1">← Voltar</button><button class="btn" type="button" data-ir="3">Ver resultado →</button></div>
+  </section>
+
+  <!-- PASSO 3 -->
+  <section class="ecra" id="ecra-3">
+    <div class="cabeca" style="display:flex; justify-content:space-between; gap:12px; align-items:flex-start; flex-wrap:wrap">
+      <div><h1>3. Enquadramento e categoria de risco</h1><p id="p3-sub"></p></div>
+      <button class="btn sec nao-imprimir" type="button" id="btn-imprimir">Imprimir / guardar PDF</button>
+    </div>
+    <div id="p3-conteudo"></div>
+    <div class="rodape-passo"><button class="btn sec" type="button" data-ir="2">← Voltar</button><button class="btn" type="button" data-ir="4">Seguinte: projeto e carga de incêndio →</button></div>
+  </section>
+
+  <!-- PASSO 4 -->
+  <section class="ecra" id="ecra-4">
+    <div class="cabeca"><h1>4. Projeto e carga de incêndio</h1><p id="p4-sub"></p></div>
+    <div id="p4-conteudo"></div>
+    <div class="rodape-passo"><button class="btn sec" type="button" data-ir="3">← Voltar ao resultado</button><span></span></div>
+  </section>
+
+  <p class="rodape-legal">Ferramenta de apoio ao técnico responsável. Baseada no DL n.º 220/2008 (redação em vigor) e no Despacho n.º 2074/2009. A conformidade final é sempre da responsabilidade do autor do projeto; confirme as tabelas assinaladas como «por verificar» no Diário da República.</p>
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

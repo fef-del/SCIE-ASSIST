@@ -1,0 +1,3046 @@
+[
+ {
+  "nome": "Acetileno, enchimento de garrafas",
+  "pag": 0,
+  "ambiguo": true,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Ácido carbónico",
+  "pag": 0,
+  "ambiguo": true,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Ácidos inorgânicos",
+  "pag": 0,
+  "ambiguo": true,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Aço",
+  "pag": 0,
+  "ambiguo": true,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Açúcar",
+  "pag": 1,
+  "qvi": 8400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Açúcar, produtos de",
+  "pag": 1,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Acumuladores / Baterias",
+  "pag": 1,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Acumuladores / Baterias, expedição",
+  "pag": 1,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Adubos químicos",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "médio",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Agulhas de aço",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Alcatrão",
+  "pag": 1,
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Alcatrão, produtos de",
+  "pag": 1,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Algodão em rama, guata",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Algodão, armazém de",
+  "pag": 1,
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Alimentação, embalagem",
+  "pag": 1,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Alimentação, expedição",
+  "pag": 1,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Alimentação, matérias-primas",
+  "pag": 1,
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Alimentação, pratos pré-cozinhados",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Alumínio, produção de",
+  "pag": 1,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Alumínio, trabalho de",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Amido",
+  "pag": 1,
+  "qsi": 2000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Aparelhos de rádio",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Aparelhos de televisão",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Aparelhos eléctricos",
+  "pag": 1,
+  "qsi": 400.0,
+  "raFab": "baixo",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Aparelhos eléctricos, reparação",
+  "pag": 1,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Aparelhos electrónicos",
+  "pag": 1,
+  "qsi": 400.0,
+  "raFab": "baixo",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Aparelhos electrónicos, reparação",
+  "pag": 1,
+  "qsi": 500.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Aparelhos fotográficos",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Aparelhos hospitalares/médicos, oficina",
+  "pag": 1,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Aparelhos mecânicos",
+  "pag": 1,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Aparelhos pequenos, construção de",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Aparelhos, ensaios/experimentação de",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Aparelhos, expedição de",
+  "pag": 1,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Aparelhos, oficinas de reparação",
+  "pag": 1,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Arame não revestido",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Arame revestido",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Armários frigoríficos",
+  "pag": 1,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 300.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Armas",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Armazém de retrosaria",
+  "pag": 1,
+  "qvi": 1400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Armazéns de papelaria",
+  "pag": 1,
+  "qvi": 1100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Armazéns de produtos farmacêuticos",
+  "pag": 1,
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Arquivos",
+  "pag": 1,
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Arquivos — restauro",
+  "pag": 1,
+  "qsi": 4200.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Artigos de gesso",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos de metal",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos de metal fundidos por injecção",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, amolar/afiar",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, envernizamento",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, forjado",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, fresado",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, fundição",
+  "pag": 1,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, gravação",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, moldagem",
+  "pag": 1,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, revestimento a ouro, banho de ouro",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, serralharia",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, soldadura",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, soldadura ligeira",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Artigos metálicos, sucatas",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Asfalto (bidons, blocos)",
+  "pag": 1,
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Asfalto, manipulação de",
+  "pag": 1,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Automóveis, armazém de acessórios",
+  "pag": 1,
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Automóveis, montagem",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Automóveis, peças",
+  "pag": 1,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Automóveis, pintura",
+  "pag": 1,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Automóveis, reparação",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Aviões",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Balanças",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Barcos de madeira",
+  "pag": 1,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Barcos de plástico",
+  "pag": 1,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Barcos metálicos",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Bebidas alcoólicas",
+  "pag": 1,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Bebidas sem álcool",
+  "pag": 1,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Bebidas sem álcool, expedição",
+  "pag": 1,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Betão, artigos de",
+  "pag": 1,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Betume de vidraceiros",
+  "pag": 1,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Bibliotecas",
+  "pag": 1,
+  "qvi": 2000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Bibliotecas — restauro",
+  "pag": 1,
+  "qsi": 2000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Bicicletas",
+  "pag": 1,
+  "qsi": 200.0,
+  "raFab": "baixo",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Borracha",
+  "pag": 2,
+  "qvi": 28600.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Borracha, artigos de",
+  "pag": 2,
+  "qsi": 600.0,
+  "raFab": "médio",
+  "qvi": 5000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Borracha, goma elástica",
+  "pag": 2,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Borracha, goma elástica, artigos de",
+  "pag": 2,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 2100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Brinquedos",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Cabos",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Cabos, Cordame",
+  "pag": 2,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 1100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cabos, Cordame, armazém de",
+  "pag": 2,
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cacau, produtos de",
+  "pag": 2,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 5800.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Café cru, sem refinar",
+  "pag": 2,
+  "qvi": 2900.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Café, extracto",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 4500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Café, torrefação",
+  "pag": 2,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Caixas de madeira",
+  "pag": 2,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Caixas fortes",
+  "pag": 2,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Caixões/Urnas de madeira",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Calçado",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Calçado, acessórios para",
+  "pag": 2,
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Calçado, expedição",
+  "pag": 2,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Cantaria",
+  "pag": 2,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Caramelos",
+  "pag": 2,
+  "qsi": 400.0,
+  "raFab": "baixo",
+  "qvi": 1500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Caramelos, embalagem",
+  "pag": 2,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Carrinhos de bebé, cadeirinhas",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Carroçarias de automóveis",
+  "pag": 2,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Carroças, artigos para",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Cartão",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 4200.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Cartão betuminoso/asfáltico",
+  "pag": 2,
+  "qsi": 2000.0,
+  "raFab": "alto",
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cartão ondulado",
+  "pag": 2,
+  "qsi": 800.0,
+  "raFab": "alto",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cartão pedra",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Cartonagem",
+  "pag": 2,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cartonagem, expedição",
+  "pag": 2,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Carvão de coke",
+  "pag": 2,
+  "qvi": 10500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Celulóide",
+  "pag": 2,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cera",
+  "pag": 2,
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cera, artigos de",
+  "pag": 2,
+  "qsi": 1300.0,
+  "raFab": "alto",
+  "qvi": 2100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cerâmica, artigos de",
+  "pag": 2,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Cervejarias",
+  "pag": 2,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Cestaria",
+  "pag": 2,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Chapa, artigos de",
+  "pag": 2,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Chapa, embalagem de artigos",
+  "pag": 2,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Chapelarias",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Chocolate",
+  "pag": 2,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 3400.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Chocolate, embalagem",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Chocolate, fabricação, sala de moldes",
+  "pag": 2,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Cimento",
+  "pag": 2,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Colas combustíveis",
+  "pag": 2,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Colas incombustíveis",
+  "pag": 2,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Colchões não sintéticos",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 5000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Compressas/ligaduras, etc., fabricação de artigos",
+  "pag": 2,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Congelados",
+  "pag": 2,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Conservas",
+  "pag": 2,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Cordoarias",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Cores com diluentes combustíveis",
+  "pag": 2,
+  "qsi": 4000.0,
+  "raFab": "alto",
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Cores e vernizes, misturas",
+  "pag": 2,
+  "qsi": 2000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Correias",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Cortiça",
+  "pag": 2,
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Cortiça, artigos de",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Cortinas em rolo, que se enrolam, tipo estore/persiana",
+  "pag": 2,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Cosméticos",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 500.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Couro",
+  "pag": 2,
+  "qvi": 1700.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Couro sintético",
+  "pag": 2,
+  "qsi": 1000.0,
+  "raFab": "médio",
+  "qvi": 1700.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Couro sintético, artigos de",
+  "pag": 2,
+  "qsi": 400.0,
+  "raFab": "baixo",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Couro sintético, corte de artigos de",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Couro, artigos de",
+  "pag": 2,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Couro, corte de artigos de",
+  "pag": 2,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Couro, venda de artigos de",
+  "pag": 2,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Crina, pelo/cerda de",
+  "pag": 2,
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Depósitos de mercadorias incombustíveis — Em caixas de madeira",
+  "pag": 2,
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Depósitos de mercadorias incombustíveis — Em caixas de plástico",
+  "pag": 2,
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Depósitos de mercadorias incombustíveis — Em estantes de madeira",
+  "pag": 2,
+  "qvi": 100.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Depósitos de mercadorias incombustíveis — Em estantes metálicas",
+  "pag": 2,
+  "qvi": 20.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Depósitos de mercadorias incombustíveis — Em móveis classificadores ou de ficheiros",
+  "pag": 2,
+  "qvi": 100.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Depósitos de mercadorias incombustíveis — Em paletes de madeira",
+  "pag": 2,
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Diluentes",
+  "pag": 2,
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Discos",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Drogarias",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Edifícios frigoríficos",
+  "pag": 3,
+  "qsi": 2000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Electricidade, armazém de materiais de",
+  "pag": 3,
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Electricidade, oficina de",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Electrodomésticos",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Embalagem de material impresso",
+  "pag": 3,
+  "qsi": 1700.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Embalagem de mercadorias combustíveis",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Embalagem de mercadorias incombustíveis",
+  "pag": 3,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Embalagem de produtos alimentares",
+  "pag": 3,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Embalagem de têxteis",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Encadernação",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Envernizamento",
+  "pag": 3,
+  "qsi": 80.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Envernizamento de móveis",
+  "pag": 3,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Envernizamento de papel",
+  "pag": 3,
+  "qsi": 80.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Equipamento de frio",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 300.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Escovas e pincéis",
+  "pag": 3,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Esculturas de pedra",
+  "pag": 3,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Esferográficas",
+  "pag": 3,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Especiarias",
+  "pag": 3,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Espumas sintéticas",
+  "pag": 3,
+  "qsi": 3000.0,
+  "raFab": "alto",
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Espumas sintéticas, artigos de",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Estampagem/gravação de produtos sintéticos, de couro, etc.",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Estofos",
+  "pag": 3,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Estofos, artigos de",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Estufas, fogões, aquecedores a gás",
+  "pag": 3,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Expedição de artigos de cristal",
+  "pag": 3,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Expedição de artigos de folha-de-flandres, lata",
+  "pag": 3,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Expedição de artigos impressos",
+  "pag": 3,
+  "qsi": 1700.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Expedição de artigos sintéticos",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Expedição de bebidas",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Expedição de cartonagem",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Expedição de ceras e vernizes",
+  "pag": 3,
+  "qsi": 1300.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Expedição de móveis",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Expedição de pequenos artigos de madeira",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Expedição de produtos alimentares",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Expedição de têxteis",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Fábrica de Cristal ou conjunto de objectos de cristal",
+  "pag": 3,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Farinha em sacos",
+  "pag": 3,
+  "qsi": 2000.0,
+  "raFab": "alto",
+  "qvi": 8400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Farinha, fábrica ou comércio sem armazém",
+  "pag": 3,
+  "qsi": 1700.0,
+  "raFab": "alto",
+  "qvi": 13000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Feltro",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Feltro, artigos de",
+  "pag": 3,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Feno, fardos de",
+  "pag": 3,
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Ferramentas",
+  "pag": 3,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Fiação, cardados/cardagem",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Fiação, encanelado/bobinado, em carrinho",
+  "pag": 3,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Fiação, fiar/fiadura",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Fiação, produtos de fio",
+  "pag": 3,
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Fiação, produtos de lã",
+  "pag": 3,
+  "qvi": 1900.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Fiação, torcidos",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Fibras de coco",
+  "pag": 3,
+  "qvi": 8400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Flores artificiais",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 200.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Folhas de lata, de folha-de-flandres",
+  "pag": 3,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Forjas",
+  "pag": 3,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Fornos",
+  "pag": 3,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Forragem",
+  "pag": 3,
+  "qsi": 2000.0,
+  "raFab": "alto",
+  "qvi": 3300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Fósforos",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Fotografia, laboratórios",
+  "pag": 3,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Fotografia, oficinas, estúdios",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Fotografias, películas/filmes",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Fundição de metais",
+  "pag": 3,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Funiculares",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Galvanoplastia",
+  "pag": 3,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Gesso",
+  "pag": 3,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Gira-discos",
+  "pag": 3,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Gorduras",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 18000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Gorduras comestíveis",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 18900.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Gorduras comestíveis, expedição",
+  "pag": 3,
+  "qsi": 900.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Gorduras líquidas comestíveis",
+  "pag": 3,
+  "qsi": 900.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Gorduras líquidas comestíveis, expedição",
+  "pag": 3,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 18900.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Gorduras líquidas: minerais, vegetais e animais",
+  "pag": 4,
+  "qvi": 18900.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Grãos, sementes",
+  "pag": 4,
+  "qsi": 600.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Guarda-chuvas",
+  "pag": 4,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Imprensa, armazém",
+  "pag": 4,
+  "qvi": 8000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Imprensa, embalagem",
+  "pag": 4,
+  "qsi": 2000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Imprensa, expedição",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Imprensa, oficina tipográfica",
+  "pag": 4,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Imprensa, sala de máquinas",
+  "pag": 4,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Incineração de lixo",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Instaladores electricistas/Electricistas",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Instaladores, oficinas",
+  "pag": 4,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Instrumentos de música",
+  "pag": 4,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Instrumentos de óptica",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Janelas de madeira",
+  "pag": 4,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Janelas de plástico",
+  "pag": 4,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Jóias, fabricação",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Lã de madeira",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Lâmpadas fluorescentes",
+  "pag": 4,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Lâmpadas incandescentes",
+  "pag": 4,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Lapiseiras",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Latoaria",
+  "pag": 4,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Lavandaria",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Legumes frescos, venda",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Legumes secos, venda",
+  "pag": 4,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 400.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Leite condensada",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Leite em pó",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo",
+  "qvi": 9000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Lenha",
+  "pag": 4,
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Levedura/fermento",
+  "pag": 4,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Licores",
+  "pag": 4,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Limpeza química, limpeza a seco",
+  "pag": 4,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Linóleo",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Locais de resíduos, refugos, desperdícios (diversas merca-",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Lúpulo",
+  "pag": 4,
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Luvas",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira em troncos",
+  "pag": 4,
+  "qvi": 6300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Madeira, aparas",
+  "pag": 4,
+  "qvi": 2100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Madeira, artigos de, carpintaria",
+  "pag": 4,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, cunhagem/cunhar",
+  "pag": 4,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, embutidos",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, entalhe",
+  "pag": 4,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, envernizamento",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, expedição",
+  "pag": 4,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, impregnação",
+  "pag": 4,
+  "qsi": 3000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Madeira, artigos de, marcenaria, talha, etc.",
+  "pag": 4,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, pulimentação",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Madeira, artigos de, secagem",
+  "pag": 4,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, serragem/serração",
+  "pag": 4,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, artigos de, torneado",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Madeira, misturada ou variada",
+  "pag": 4,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 4200.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Madeira, restos de",
+  "pag": 4,
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Madeira, vigas e tábuas",
+  "pag": 4,
+  "qvi": 4200.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Malte",
+  "pag": 4,
+  "qvi": 13400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Manteiga",
+  "pag": 4,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Máquinas",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Máquinas de coser",
+  "pag": 4,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Máquinas de escritório",
+  "pag": 4,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Máquinas de lavar roupa",
+  "pag": 4,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Marmelada",
+  "pag": 4,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Mármore, artigos de",
+  "pag": 4,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Massas alimentícias",
+  "pag": 4,
+  "qsi": 1300.0,
+  "raFab": "alto",
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Massas alimentícias, expedição",
+  "pag": 4,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Matadouros",
+  "pag": 4,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Materiais de construção, armazém",
+  "pag": 4,
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Materiais e aparelhos para canalizações",
+  "pag": 4,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Materiais sintéticos",
+  "pag": 4,
+  "qsi": 2000.0,
+  "raFab": "alto",
+  "qvi": 5900.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Materiais usados, tratamento",
+  "pag": 4,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Material de escritório",
+  "pag": 4,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Matérias sintéticas injectadas",
+  "pag": 4,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Matérias sintéticas, artigos de",
+  "pag": 4,
+  "qsi": 600.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Matérias sintéticas, estampado",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Matérias sintéticas, expedição",
+  "pag": 5,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Matérias sintéticas, soldadura de peças",
+  "pag": 5,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Mecânica de precisão, oficina",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Medicamentos, embalagem",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Melaço",
+  "pag": 5,
+  "qvi": 5000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Metais preciosos",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Metais, manufacturas em geral",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Metálicas, grandes construções",
+  "pag": 5,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Minerais",
+  "pag": 5,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Moldagem de matérias sintéticas",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Moldagem de metais",
+  "pag": 5,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Molduras",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Mostarda",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Motocicletas",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Motores eléctricos",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Móveis de aço",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Moveis de madeira",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Móveis de madeira, envernizamento",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Móveis, carpintaria",
+  "pag": 5,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Móveis, estofados sem espuma sintética",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Negro de fumo, em sacos",
+  "pag": 5,
+  "qvi": 12600.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Oficinas de chapa, trabalho feito com chapa, oficinas onde se",
+  "pag": 5,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 2900.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Oficinas de correaria, selaria",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Oficinas de electricidade",
+  "pag": 5,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Oficinas de mecânica",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Oficinas de pintura",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Oficinas de reparação",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Olaria",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Padarias industriais",
+  "pag": 5,
+  "qsi": 1000.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Padarias, armazéns",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Padarias, laboratórios e fornos",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Painéis de cortiça",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Painéis de madeira",
+  "pag": 5,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Painéis de madeira aglomerada",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 6700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Paletes de madeira",
+  "pag": 5,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Palha prensada",
+  "pag": 5,
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Palha, artigos de",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Palha, embalagens de",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Palhinha, para assentos e costas (de cadeiras, etc.)",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Palitos",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Papel",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo",
+  "qvi": 10000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Papel, apresto/preparação",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Papel, resíduos/restos/desperdícios prensados",
+  "pag": 5,
+  "qvi": 2100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Papel, tratamento da madeira e matérias celulósicas",
+  "pag": 5,
+  "qsi": 80.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Papel, tratamento, fabricação",
+  "pag": 5,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Papel, velho ou a granel",
+  "pag": 5,
+  "qvi": 8400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Parquets",
+  "pag": 5,
+  "qsi": 2000.0,
+  "raFab": "alto",
+  "qvi": 1200.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Pastelarias com confecção",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "baixo",
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Pedras artificiais",
+  "pag": 5,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Pedras de afiar, amolar",
+  "pag": 5,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Pedras preciosas, lapidação",
+  "pag": 5,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Pedras refractárias",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Pelaria, produtos de",
+  "pag": 5,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 1200.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Peles, armazém",
+  "pag": 5,
+  "qvi": 1200.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Películas / filmes, cópias",
+  "pag": 5,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Películas / filmes, oficinas de",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Perfumaria, artigos de",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 500.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Persianas, fabricação de",
+  "pag": 5,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 300.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Pilhas secas",
+  "pag": 5,
+  "qsi": 400.0,
+  "raFab": "baixo",
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Pincéis",
+  "pag": 5,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Placas de fibras moles/suaves",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Placas de resina sintética",
+  "pag": 5,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Planadores",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Pneumáticos, pneus",
+  "pag": 5,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 1800.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Pneumáticos, pneus de automóveis",
+  "pag": 5,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 1500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Porcelanas",
+  "pag": 5,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Portas de madeira",
+  "pag": 5,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 1800.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Portas plásticas",
+  "pag": 5,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 4200.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Produtos de amianto",
+  "pag": 5,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Produtos de lavagem (lixívia)",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Produtos de lavagem (lixívia matéria prima)",
+  "pag": 6,
+  "qvi": 500.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Produtos de reparação de calçado",
+  "pag": 6,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 2100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Produtos de talho, carnes, produtos de carne",
+  "pag": 6,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Produtos farmacêuticos",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Produtos lácteos",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Produtos laminados excepto chapa e arame",
+  "pag": 6,
+  "qsi": 100.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Produtos químicos combustíveis",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "alto",
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Queijos",
+  "pag": 6,
+  "qsi": 100.0,
+  "raFab": "médio",
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Relógios",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Relógios, reparação de",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Resinas naturais",
+  "pag": 6,
+  "qsi": 3300.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Resinas sintéticas",
+  "pag": 6,
+  "qsi": 3400.0,
+  "raFab": "alto",
+  "qvi": 4200.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Resinas sintéticas, placas de",
+  "pag": 6,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 3400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Revestimentos de chão combustíveis",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 6000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Rolamentos ou rolamentos de esferas",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Roupa, armários de madeira",
+  "pag": 6,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Roupa, armários metálicos",
+  "pag": 6,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Sabão",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "baixo",
+  "qvi": 4200.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Sacos de juta",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Sacos de papel",
+  "pag": 6,
+  "qsi": 800.0,
+  "raFab": "médio",
+  "qvi": 12600.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Sacos de plástico",
+  "pag": 6,
+  "qsi": 600.0,
+  "raFab": "alto",
+  "qvi": 25200.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Salinas, produtos de",
+  "pag": 6,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Serração",
+  "pag": 6,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Serralharia",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Serviços de mesa, louças",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Skis",
+  "pag": 6,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Soda, óxido de sódio",
+  "pag": 6,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Subestação de transformação",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Sucata/ferro-velho",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Sumos de fruta",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "baixo",
+  "qvi": 300.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Tabaco em bruto",
+  "pag": 6,
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tabaco, artigos de",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "médio",
+  "qvi": 2100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Talco",
+  "pag": 6,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Tapeçarias",
+  "pag": 6,
+  "qsi": 600.0,
+  "raFab": "médio",
+  "qvi": 1700.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tapeçarias, tinturaria, tingido, tinto",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Tecidos cânhamo, juta, linho",
+  "pag": 6,
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tecidos de ráfia",
+  "pag": 6,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Tecidos em geral, armazém",
+  "pag": 6,
+  "qvi": 2000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tecidos sintéticos",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tecidos, depósito de fardos de algodão",
+  "pag": 6,
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tecidos, seda artificial",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "médio",
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Telefones",
+  "pag": 6,
+  "qsi": 400.0,
+  "raFab": "médio",
+  "qvi": 200.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Telhas, tijolos ou adobe, cozedura",
+  "pag": 6,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Telhas, tijolos ou adobe, fornos de secagem e estantes de ma-",
+  "pag": 6,
+  "qsi": 1000.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Telhas, tijolos ou adobe, fornos de secagem e estantes me-",
+  "pag": 6,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Telhas, tijolos ou adobe, prensagem, prensas",
+  "pag": 6,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Telhas, tijolos ou adobe, preparação da argila, greda, barro",
+  "pag": 6,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Telhas, tijolos ou adobe, secagem, estantes de madeira",
+  "pag": 6,
+  "qsi": 400.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Telhas, tijolos ou adobe, secagem, estantes metálicas",
+  "pag": 6,
+  "qsi": 40.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Têxteis",
+  "pag": 6,
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Têxteis, apresto/preparação",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1100.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Têxteis, artigos de",
+  "pag": 6,
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Têxteis, bordado",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Têxteis, branqueamento",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, calandragem",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, confecção",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Têxteis, corte",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, de juta",
+  "pag": 6,
+  "qsi": 400.0,
+  "raFab": "baixo",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Têxteis, de linho",
+  "pag": 6,
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Têxteis, embalagem",
+  "pag": 6,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, entretelas",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Têxteis, estampagem",
+  "pag": 6,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, expedição",
+  "pag": 6,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, forros",
+  "pag": 6,
+  "qsi": 700.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, mantas",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 1900.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Têxteis, preparação",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, rendas, bordados, aplicações, decorações",
+  "pag": 6,
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Têxteis, roupa de cama",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, roupa de vestir",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Têxteis, roupa interior",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 600.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Têxteis, tecidos (fabricação)",
+  "pag": 6,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, tinturaria, tingimento, coloração",
+  "pag": 6,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Têxteis, tricotado",
+  "pag": 7,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1300.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tintas",
+  "pag": 7,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Tintas e Vernizes",
+  "pag": 7,
+  "qsi": 800.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Tintas para impressão",
+  "pag": 7,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 3000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Tinturaria",
+  "pag": 7,
+  "qsi": 500.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Toldos ou lonas",
+  "pag": 7,
+  "qsi": 300.0,
+  "raFab": "baixo",
+  "qvi": 1000.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Tonéis de madeira",
+  "pag": 7,
+  "qsi": 1000.0,
+  "raFab": "alto",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Tonéis de plástico",
+  "pag": 7,
+  "qsi": 600.0,
+  "raFab": "médio",
+  "qvi": 800.0,
+  "raArm": "médio"
+ },
+ {
+  "nome": "Torneado de peças de cobre/bronze",
+  "pag": 7,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Tractores",
+  "pag": 7,
+  "qsi": 300.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Transformadores",
+  "pag": 7,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Transformadores, bobinagem",
+  "pag": 7,
+  "qsi": 600.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Vagões, fabricação de",
+  "pag": 7,
+  "qsi": 200.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Vassouras",
+  "pag": 7,
+  "qsi": 700.0,
+  "raFab": "médio",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Veículos",
+  "pag": 7,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Velas de cera",
+  "pag": 7,
+  "qsi": 1300.0,
+  "raFab": "alto",
+  "qvi": 22400.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Venda por correspondência, empresas de",
+  "pag": 7,
+  "qsi": 400.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Vernizes",
+  "pag": 7,
+  "qsi": 5000.0,
+  "raFab": "alto",
+  "qvi": 2500.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Vernizes de cera",
+  "pag": 7,
+  "qsi": 2000.0,
+  "raFab": "alto",
+  "qvi": 5000.0,
+  "raArm": "alto"
+ },
+ {
+  "nome": "Vernizes, expedição",
+  "pag": 7,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ },
+ {
+  "nome": "Vestuário — fatos, trajes, vestes",
+  "pag": 7,
+  "qsi": 500.0,
+  "raFab": "médio",
+  "qvi": 400.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Vidro",
+  "pag": 7,
+  "qsi": 80.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Vidro soprado, oficina/fábrica de vidro soprado",
+  "pag": 7,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Vidro, artigos de",
+  "pag": 7,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Vidro, coloração do",
+  "pag": 7,
+  "qsi": 300.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Vidro, expedição",
+  "pag": 7,
+  "qsi": 700.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Vidro, plano, fábrica de",
+  "pag": 7,
+  "qsi": 700.0,
+  "raFab": "baixo"
+ },
+ {
+  "nome": "Vidro, tratamento de",
+  "pag": 7,
+  "qsi": 200.0,
+  "raFab": "médio"
+ },
+ {
+  "nome": "Vinagre, produção de",
+  "pag": 7,
+  "qsi": 80.0,
+  "raFab": "baixo",
+  "qvi": 100.0,
+  "raArm": "baixo"
+ },
+ {
+  "nome": "Vulcanização",
+  "pag": 7,
+  "qsi": 1000.0,
+  "raFab": "alto"
+ }
+]

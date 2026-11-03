@@ -1,0 +1,165 @@
+{
+  "versaoLegal": "DL 220/2008, Anexo III, redação da Lei 123/2019 (versão atualizada até ao DL 9/2021)",
+  "nota": "Valores lidos dos PDFs dos diplomas. Cada utilização-tipo tem um estado de verificação; só passa a 'verificada' depois de conferida pela técnica responsável.",
+  "ut": {
+    "I": {
+      "nome": "Habitacionais",
+      "verificacao": "por_verificar",
+      "prioridade": true,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro I",
+      "parametros": ["altura", "pisosAbaixo"],
+      "limites": {
+        "1": { "altura": 9, "pisosAbaixo": 1 },
+        "2": { "altura": 28, "pisosAbaixo": 3 },
+        "3": { "altura": 50, "pisosAbaixo": 5 }
+      }
+    },
+    "II": {
+      "nome": "Estacionamentos",
+      "verificacao": "por_verificar",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro II",
+      "parametros": ["altura", "areaBruta", "pisosAbaixo"],
+      "arLivreCategoria1": true,
+      "limites": {
+        "1": { "altura": 9, "areaBruta": 3200, "pisosAbaixo": 1 },
+        "2": { "altura": 28, "areaBruta": 9600, "pisosAbaixo": 3 },
+        "3": { "altura": 28, "areaBruta": 32000, "pisosAbaixo": 5 }
+      }
+    },
+    "III": {
+      "nome": "Administrativos",
+      "verificacao": "por_verificar",
+      "prioridade": true,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro III",
+      "parametros": ["altura", "efetivo"],
+      "limites": {
+        "1": { "altura": 9, "efetivo": 100 },
+        "2": { "altura": 28, "efetivo": 1000 },
+        "3": { "altura": 50, "efetivo": 5000 }
+      }
+    },
+    "IV": {
+      "nome": "Escolares",
+      "verificacao": "por_verificar",
+      "prioridade": true,
+      "fonte": "DL 220/2008, art. 12.º e 13.º, n.º 3, e Anexo III, Quadro IV",
+      "parametros": ["altura", "efetivo", "efetivoLocaisDE"],
+      "efetivoMais50SemLocaisDE": true,
+      "saidaDiretaCategoria1": "locaisD",
+      "limites": {
+        "1": { "altura": 9, "efetivo": 100, "efetivoLocaisDE": 25 },
+        "2": { "altura": 9, "efetivo": 500, "efetivoLocaisDE": 100 },
+        "3": { "altura": 28, "efetivo": 1500, "efetivoLocaisDE": 400 }
+      }
+    },
+    "V": {
+      "nome": "Hospitalares e lares de idosos",
+      "verificacao": "por_verificar",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro IV",
+      "parametros": ["altura", "efetivo", "efetivoLocaisDE"],
+      "saidaDiretaCategoria1": "locaisD",
+      "limites": {
+        "1": { "altura": 9, "efetivo": 100, "efetivoLocaisDE": 25 },
+        "2": { "altura": 9, "efetivo": 500, "efetivoLocaisDE": 100 },
+        "3": { "altura": 28, "efetivo": 1500, "efetivoLocaisDE": 400 }
+      }
+    },
+    "VI": {
+      "nome": "Espetáculos e reuniões públicas",
+      "verificacao": "por_verificar",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro V",
+      "parametros": ["altura", "pisosAbaixo", "efetivo"],
+      "arLivreEfetivo": { "1": 1000, "2": 15000, "3": 40000 },
+      "limites": {
+        "1": { "altura": 9, "pisosAbaixo": 0, "efetivo": 100 },
+        "2": { "altura": 28, "pisosAbaixo": 1, "efetivo": 1000 },
+        "3": { "altura": 28, "pisosAbaixo": 2, "efetivo": 5000 }
+      }
+    },
+    "VII": {
+      "nome": "Hoteleiros e restauração",
+      "verificacao": "por_verificar",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro VI (coluna de saídas diretas acrescentada pela Lei 123/2019)",
+      "parametros": ["altura", "efetivo", "efetivoLocaisDE"],
+      "saidaDiretaCategoria1": "locaisE",
+      "limites": {
+        "1": { "altura": 9, "efetivo": 100, "efetivoLocaisDE": 50 },
+        "2": { "altura": 28, "efetivo": 500, "efetivoLocaisDE": 200 },
+        "3": { "altura": 28, "efetivo": 1500, "efetivoLocaisDE": 800 }
+      }
+    },
+    "VIII": {
+      "nome": "Comerciais e gares de transportes",
+      "verificacao": "por_verificar",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro VII",
+      "parametros": ["altura", "pisosAbaixo", "efetivo"],
+      "limites": {
+        "1": { "altura": 9, "pisosAbaixo": 0, "efetivo": 100 },
+        "2": { "altura": 28, "pisosAbaixo": 1, "efetivo": 1000 },
+        "3": { "altura": 28, "pisosAbaixo": 2, "efetivo": 5000 }
+      }
+    },
+    "IX": {
+      "nome": "Desportivos e de lazer",
+      "verificacao": "por_verificar",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro V",
+      "parametros": ["altura", "pisosAbaixo", "efetivo"],
+      "arLivreEfetivo": { "1": 1000, "2": 15000, "3": 40000 },
+      "limites": {
+        "1": { "altura": 9, "pisosAbaixo": 0, "efetivo": 100 },
+        "2": { "altura": 28, "pisosAbaixo": 1, "efetivo": 1000 },
+        "3": { "altura": 28, "pisosAbaixo": 2, "efetivo": 5000 }
+      }
+    },
+    "X": {
+      "nome": "Museus e galerias de arte",
+      "verificacao": "por_verificar",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro VIII",
+      "parametros": ["altura", "efetivo"],
+      "limites": {
+        "1": { "altura": 9, "efetivo": 100 },
+        "2": { "altura": 28, "efetivo": 500 },
+        "3": { "altura": 28, "efetivo": 1500 }
+      }
+    },
+    "XI": {
+      "nome": "Bibliotecas e arquivos",
+      "verificacao": "divergencia",
+      "prioridade": false,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro IX",
+      "parametros": ["altura", "pisosAbaixo", "efetivo", "carga"],
+      "cargaArmazensX10": true,
+      "limitesBase": {
+        "1": { "altura": 9, "pisosAbaixo": 0, "efetivo": 100 },
+        "2": { "altura": 28, "pisosAbaixo": 1, "efetivo": 500 },
+        "3": { "altura": 28, "pisosAbaixo": 2, "efetivo": 1500 }
+      },
+      "variantesCarga": {
+        "republicacaoEVersaoAtualizada": { "1": 1000, "2": 10000, "3": 30000 },
+        "anexoILei123_2019": { "1": 5000, "2": 50000, "3": 150000 }
+      },
+      "divergencia": "O anexo I da Lei 123/2019 e a sua republicação indicam valores de carga de incêndio diferentes para a utilização-tipo XI."
+    },
+    "XII": {
+      "nome": "Industriais, oficinas e armazéns",
+      "verificacao": "por_verificar",
+      "prioridade": true,
+      "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro X",
+      "parametros": ["carga", "pisosAbaixo"],
+      "cargaArmazensX10": true,
+      "limites": {
+        "1": { "carga": 500, "pisosAbaixo": 0 },
+        "2": { "carga": 5000, "pisosAbaixo": 1 },
+        "3": { "carga": 15000, "pisosAbaixo": 1 }
+      },
+      "arLivreCarga": { "1": 1000, "2": 10000, "3": 30000 }
+    }
+  }
+}

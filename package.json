@@ -1,0 +1,10 @@
+{
+  "name": "scie-assist",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Classificação da categoria de risco SCIE (Portugal) e decisão entre ficha de segurança e projeto",
+  "scripts": {
+    "test": "node --test test/classificar.test.js test/carga.test.js"
+  }
+}

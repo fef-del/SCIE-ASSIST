@@ -1,0 +1,542 @@
+[
+ {
+  "nome": "Acetaldeido",
+  "hi": 25.1
+ },
+ {
+  "nome": "Álcool butílico",
+  "hi": 33.5
+ },
+ {
+  "nome": "Acetato de amido",
+  "hi": 33.5
+ },
+ {
+  "nome": "Anilina",
+  "hi": 37.2
+ },
+ {
+  "nome": "Acetato de amilo",
+  "hi": 21.0
+ },
+ {
+  "nome": "Antracite",
+  "hi": 33.5
+ },
+ {
+  "nome": "Acetato de polivinilo",
+  "hi": 21.0
+ },
+ {
+  "nome": "Antracina (substância extraída do alcatrão da hulha)",
+  "hi": 42.0
+ },
+ {
+  "nome": "Acetileno",
+  "hi": 50.2
+ },
+ {
+  "nome": "Açúcar",
+  "hi": 16.7
+ },
+ {
+  "nome": "Acetileno dissolvido",
+  "hi": 16.7
+ },
+ {
+  "nome": "Benzaldeido",
+  "hi": 33.5
+ },
+ {
+  "nome": "Acetona",
+  "hi": 29.3
+ },
+ {
+  "nome": "Benzina",
+  "hi": 42.0
+ },
+ {
+  "nome": "Acido acético",
+  "hi": 16.7
+ },
+ {
+  "nome": "Enxofre",
+  "hi": 8.4
+ },
+ {
+  "nome": "Acido benzóico",
+  "hi": 25.1
+ },
+ {
+  "nome": "Benzol",
+  "hi": 42.0
+ },
+ {
+  "nome": "Acroleína",
+  "hi": 29.3
+ },
+ {
+  "nome": "Benzidina",
+  "hi": 33.8
+ },
+ {
+  "nome": "Aguarrás",
+  "hi": 42.0
+ },
+ {
+  "nome": "Butano",
+  "hi": 46.0
+ },
+ {
+  "nome": "Albumina vegetal",
+  "hi": 25.1
+ },
+ {
+  "nome": "Cacau em pó",
+  "hi": 16.7
+ },
+ {
+  "nome": "Álcool alílico",
+  "hi": 33.5
+ },
+ {
+  "nome": "Café",
+  "hi": 16.7
+ },
+ {
+  "nome": "Álcool amílico",
+  "hi": 42.0
+ },
+ {
+  "nome": "Cálcio",
+  "hi": 4.2
+ },
+ {
+  "nome": "Azeite",
+  "hi": 42.0
+ },
+ {
+  "nome": "Borracha",
+  "hi": 42.0
+ },
+ {
+  "nome": "Cânfora",
+  "hi": 37.2
+ },
+ {
+  "nome": "Amido",
+  "hi": 16.7
+ },
+ {
+  "nome": "Carbono",
+  "hi": 33.5
+ },
+ {
+  "nome": "Cafeína",
+  "hi": 21.0
+ },
+ {
+  "nome": "Cartão",
+  "hi": 16.7
+ },
+ {
+  "nome": "Ebonite",
+  "hi": 33.5
+ },
+ {
+  "nome": "Cartão asfáltico",
+  "hi": 21.0
+ },
+ {
+  "nome": "Eptano",
+  "hi": 50.2
+ },
+ {
+  "nome": "Carvão",
+  "hi": 31.4
+ },
+ {
+  "nome": "Éter amílico",
+  "hi": 42.0
+ },
+ {
+  "nome": "Celulóide",
+  "hi": 16.7
+ },
+ {
+  "nome": "Dipenteno",
+  "hi": 46.0
+ },
+ {
+  "nome": "Celulose",
+  "hi": 16.7
+ },
+ {
+  "nome": "Éter etílico",
+  "hi": 33.5
+ },
+ {
+  "nome": "Cereais",
+  "hi": 16.7
+ },
+ {
+  "nome": "Fibra de coco",
+  "hi": 25.1
+ },
+ {
+  "nome": "Chocolate",
+  "hi": 25.1
+ },
+ {
+  "nome": "Fenol",
+  "hi": 33.5
+ },
+ {
+  "nome": "Cicloheptano",
+  "hi": 46.0
+ },
+ {
+  "nome": "Fósforo",
+  "hi": 25.1
+ },
+ {
+  "nome": "Ciclohexano",
+  "hi": 46.0
+ },
+ {
+  "nome": "Furano",
+  "hi": 25.1
+ },
+ {
+  "nome": "Ciclopentano",
+  "hi": 46.0
+ },
+ {
+  "nome": "Gasóleo",
+  "hi": 42.0
+ },
+ {
+  "nome": "Ciclopropano",
+  "hi": 50.2
+ },
+ {
+  "nome": "Glicerina",
+  "hi": 16.7
+ },
+ {
+  "nome": "Cloreto de polivinil",
+  "hi": 21.0
+ },
+ {
+  "nome": "Gorduras",
+  "hi": 42.0
+ },
+ {
+  "nome": "Cola celulósica",
+  "hi": 37.2
+ },
+ {
+  "nome": "Guta-percha, goma-guta",
+  "hi": 46.0
+ },
+ {
+  "nome": "Coque de hulha",
+  "hi": 29.3
+ },
+ {
+  "nome": "Farinha de trigo",
+  "hi": 16.7
+ },
+ {
+  "nome": "Couro",
+  "hi": 21.0
+ },
+ {
+  "nome": "Heptano",
+  "hi": 46.0
+ },
+ {
+  "nome": "Creosoto/fenol",
+  "hi": 37.2
+ },
+ {
+  "nome": "Hexametileno",
+  "hi": 46.0
+ },
+ {
+  "nome": "Dietilamina",
+  "hi": 42.0
+ },
+ {
+  "nome": "Álcool cetílico",
+  "hi": 42.0
+ },
+ {
+  "nome": "Dietilcetona",
+  "hi": 33.5
+ },
+ {
+  "nome": "Hexano",
+  "hi": 46.0
+ },
+ {
+  "nome": "Dietileter",
+  "hi": 37.2
+ },
+ {
+  "nome": "Hidrogénio",
+  "hi": 142.0
+ },
+ {
+  "nome": "Difenilos",
+  "hi": 42.0
+ },
+ {
+  "nome": "Hidreto de magnesio",
+  "hi": 16.7
+ },
+ {
+  "nome": "Dinamite (75 %)",
+  "hi": 4.2
+ },
+ {
+  "nome": "Hidreto de sódio",
+  "hi": 8.4
+ },
+ {
+  "nome": "Fuelóleo",
+  "hi": 40.0
+ },
+ {
+  "nome": "Etileno",
+  "hi": 50.0
+ },
+ {
+  "nome": "Propano",
+  "hi": 48.0
+ },
+ {
+  "nome": "Gás Natural",
+  "hi": 25.84
+ },
+ {
+  "nome": "Lenha em Cavacos",
+  "hi": 10.5
+ },
+ {
+  "nome": "Resíduos Florestais",
+  "hi": 11.3
+ },
+ {
+  "nome": "Casca de Eucalipto",
+  "hi": 17.5
+ },
+ {
+  "nome": "Resíduos Sólidos misto e ao ar livre (teor de humidade < 30 %)",
+  "hi": 12.5
+ },
+ {
+  "nome": "Casca de outra Madeira",
+  "hi": 4.18
+ },
+ {
+  "nome": "Resíduos Sólidos misto e ao ar livre (30 % < teor de humidade < 60 %)",
+  "hi": 10.5
+ },
+ {
+  "nome": "Biodsel",
+  "hi": 39.0
+ },
+ {
+  "nome": "Resíduos Sólidos misto e ao ar livre (teor de humidade > 60 %)",
+  "hi": 8.5
+ },
+ {
+  "nome": "Leite em Pó",
+  "hi": 16.7
+ },
+ {
+  "nome": "Linho",
+  "hi": 16.7
+ },
+ {
+  "nome": "Polisobutileno",
+  "hi": 46.0
+ },
+ {
+  "nome": "Linóleo",
+  "hi": 2.1
+ },
+ {
+  "nome": "Politetrafluoretileno (PTFE) — designação comercial: teflon",
+  "hi": 4.2
+ },
+ {
+  "nome": "Madeira",
+  "hi": 16.7
+ },
+ {
+  "nome": "Poliuretano (PUR)",
+  "hi": 25.1
+ },
+ {
+  "nome": "Magnésio",
+  "hi": 25.1
+ },
+ {
+  "nome": "Propano",
+  "hi": 46.0
+ },
+ {
+  "nome": "Malte",
+  "hi": 16.7
+ },
+ {
+  "nome": "Rayon (fibra sintética)",
+  "hi": 16.7
+ },
+ {
+  "nome": "Manteiga",
+  "hi": 37.2
+ },
+ {
+  "nome": "Resina de pinho",
+  "hi": 42.0
+ },
+ {
+  "nome": "Metano",
+  "hi": 50.2
+ },
+ {
+  "nome": "Resina de fenol",
+  "hi": 25.1
+ },
+ {
+  "nome": "Monóxido de carbono",
+  "hi": 8.4
+ },
+ {
+  "nome": "Resina de ureia",
+  "hi": 21.0
+ },
+ {
+  "nome": "Nitrito de acetona",
+  "hi": 29.3
+ },
+ {
+  "nome": "Seda",
+  "hi": 21.0
+ },
+ {
+  "nome": "Nitrocelulose",
+  "hi": 8.4
+ },
+ {
+  "nome": "Sisal",
+  "hi": 16.7
+ },
+ {
+  "nome": "Octanos",
+  "hi": 46.0
+ },
+ {
+  "nome": "Sódio",
+  "hi": 4.2
+ },
+ {
+  "nome": "Óleo de linhaça",
+  "hi": 37.2
+ },
+ {
+  "nome": "Sulfureto de carbono",
+  "hi": 12.5
+ },
+ {
+  "nome": "Papel",
+  "hi": 16.7
+ },
+ {
+  "nome": "Álcool etílico",
+  "hi": 25.1
+ },
+ {
+  "nome": "Parafina",
+  "hi": 46.0
+ },
+ {
+  "nome": "Tabaco",
+  "hi": 16.7
+ },
+ {
+  "nome": "Parafina / óleo de parafina",
+  "hi": 42.0
+ },
+ {
+  "nome": "Chá",
+  "hi": 16.7
+ },
+ {
+  "nome": "Pentanos",
+  "hi": 50.2
+ },
+ {
+  "nome": "Anidrido acético",
+  "hi": 16.7
+ },
+ {
+  "nome": "Petróleo",
+  "hi": 42.0
+ },
+ {
+  "nome": "Tetralina (essência de naftalina)",
+  "hi": 46.0
+ },
+ {
+  "nome": "Petróleo",
+  "hi": 42.0
+ },
+ {
+  "nome": "Álcool metílico",
+  "hi": 21.0
+ },
+ {
+  "nome": "Poliamida",
+  "hi": 29.3
+ },
+ {
+  "nome": "Tolueno",
+  "hi": 42.0
+ },
+ {
+  "nome": "Policarbonato",
+  "hi": 29.3
+ },
+ {
+  "nome": "Triacetato (celulose)",
+  "hi": 16.7
+ },
+ {
+  "nome": "Poliéster",
+  "hi": 25.1
+ },
+ {
+  "nome": "Turfa",
+  "hi": 33.5
+ },
+ {
+  "nome": "Poliestireno",
+  "hi": 42.0
+ },
+ {
+  "nome": "Ureia",
+  "hi": 8.4
+ },
+ {
+  "nome": "Polietileno",
+  "hi": 42.0
+ },
+ {
+  "nome": "Viscose",
+  "hi": 16.7
+ }
+]
