@@ -2,7 +2,7 @@
 // A chave nunca vai para o navegador: fica na variável de ambiente GEMINI_API_KEY.
 // A IA não decide categorias de risco; isso é feito pelas regras em public/js/classificar.js.
 
-const MODELO = process.env.GEMINI_MODEL || 'gemini-2.5-flash';
+const MODELO = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const MAX_POR_HORA = 20; // limite simples por IP (melhor esforço, em memória)
 const usos = new Map();
 
@@ -38,23 +38,31 @@ export default async function handler(req, res) {
   }
   if (dados.length > 4_000_000) return res.status(413).json({ erro: 'Ficheiro demasiado grande. Reduza a imagem ou o PDF.' });
 
-  try {
-    const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave },
-      body: JSON.stringify({
-        contents: [{ parts: [{ text: PROMPT + (piso ? `\nEsta planta corresponde ao piso: ${String(piso).slice(0, 40)}.` : '') }, { inline_data: { mime_type: mime, data: dados } }] }],
-        generationConfig: { temperature: 0, responseMimeType: 'application/json' }
-      })
-    });
-    if (r.status === 429) return res.status(429).json({ erro: 'A quota gratuita da IA esgotou-se por agora. Tente daqui a uns minutos.' });
-    if (!r.ok) return res.status(502).json({ erro: `A IA devolveu um erro (${r.status}). Verifique a chave e o nome do modelo.` });
-    const j = await r.json();
-    const texto = j?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') || '';
-    let obj;
-    try { obj = JSON.parse(texto.replace(/^```json\s*|```\s*$/g, '')); } catch { return res.status(502).json({ erro: 'Não foi possível interpretar a resposta da IA.' }); }
-    return res.status(200).json(obj);
-  } catch {
-    return res.status(502).json({ erro: 'Falha na ligação à IA.' });
+  const corpo = JSON.stringify({
+    contents: [{ parts: [{ text: PROMPT + (piso ? `\nEsta planta corresponde ao piso: ${String(piso).slice(0, 40)}.` : '') }, { inline_data: { mime_type: mime, data: dados } }] }],
+    generationConfig: { temperature: 0, responseMimeType: 'application/json' }
+  });
+  const modelos = [MODELO, ...(process.env.GEMINI_FALLBACK ? [process.env.GEMINI_FALLBACK] : ['gemini-3.5-flash-lite'])].filter((m, i, a) => a.indexOf(m) === i);
+  const espera = (ms) => new Promise((r) => setTimeout(r, ms));
+  let ultimo = null;
+  for (const modelo of modelos) {
+    for (let tentativa = 0; tentativa < 2; tentativa += 1) {
+      try {
+        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave }, body: corpo
+        });
+        if (r.ok) {
+          const j = await r.json();
+          const texto = j?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') || '';
+          try { return res.status(200).json(JSON.parse(texto.replace(/^```json\s*|```\s*$/g, ''))); } catch { return res.status(502).json({ erro: 'Não foi possível interpretar a resposta da IA.' }); }
+        }
+        const detalhe = (await r.json().catch(() => ({})))?.error?.message || '';
+        ultimo = { codigo: r.status, modelo, detalhe: String(detalhe).slice(0, 200) };
+        if (r.status === 429) return res.status(429).json({ erro: 'A quota gratuita da IA esgotou-se por agora. Tente daqui a uns minutos.' });
+        if (r.status === 404 || r.status === 400 || r.status === 403) break; // não adianta repetir; tenta o outro modelo
+        await espera(1500);
+      } catch { ultimo = { codigo: 0, modelo, detalhe: 'falha de ligação' }; await espera(1000); }
+    }
   }
+  return res.status(502).json({ erro: `A IA está indisponível (${ultimo?.codigo || 'sem resposta'}, modelo ${ultimo?.modelo}). ${ultimo?.detalhe || ''} Tente novamente dentro de instantes.`.trim() });
 }
