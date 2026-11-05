@@ -5,6 +5,7 @@
 const MODELO = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
 const MAX_POR_HORA = 20; // limite simples por IP (melhor esforço, em memória)
 const usos = new Map();
+const VERSAO = 'v3-diagnostico';
 
 const PROMPT = `És um assistente que ajuda um técnico português de segurança contra incêndio (SCIE).
 Analisa esta planta de arquitetura e extrai APENAS o que estiver visível ou escrito (cotas, quadros de áreas, legendas, cortes).
@@ -20,8 +21,30 @@ Responde só em JSON, em português de Portugal, com este formato:
  "observacoes": ["dúvidas ou elementos que o técnico deve confirmar"]
 }`;
 
+// Diagnóstico: abra /api/ler-planta no navegador para ver a versão, se a chave existe e que modelos a conta pode usar.
+async function diagnostico(res) {
+  const chave = process.env.GEMINI_API_KEY;
+  const saida = { versao: VERSAO, chaveConfigurada: Boolean(chave), modeloConfigurado: MODELO };
+  if (!chave) return res.status(200).json(saida);
+  try {
+    const l = await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', { headers: { 'x-goog-api-key': chave } });
+    saida.listaModelosStatus = l.status;
+    const j = await l.json().catch(() => ({}));
+    if (l.ok) saida.modelosFlash = (j.models || []).filter((m) => (m.supportedGenerationMethods || []).includes('generateContent') && /flash/i.test(m.name)).map((m) => m.name.replace('models/', ''));
+    else saida.erroLista = j?.error?.message;
+    const t = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
+      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave },
+      body: JSON.stringify({ contents: [{ parts: [{ text: 'Responde apenas: ok' }] }] })
+    });
+    saida.testeModeloConfigurado = t.status;
+    if (!t.ok) saida.erroTeste = (await t.json().catch(() => ({})))?.error?.message;
+  } catch (e) { saida.falha = String(e.message || e); }
+  return res.status(200).json(saida);
+}
+
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'no-store');
+  if (req.method === 'GET') return diagnostico(res);
   if (req.method !== 'POST') return res.status(405).json({ erro: 'Método não permitido.' });
   const chave = process.env.GEMINI_API_KEY;
   if (!chave) return res.status(503).json({ erro: 'A leitura por IA ainda não está configurada (falta a chave GEMINI_API_KEY no servidor).' });
