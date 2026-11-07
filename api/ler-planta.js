@@ -2,10 +2,11 @@
 // A chave nunca vai para o navegador: fica na variável de ambiente GEMINI_API_KEY.
 // A IA não decide categorias de risco; isso é feito pelas regras em public/js/classificar.js.
 
-  const modelos = [MODELO, 'gemini-3.5-flash', 'gemini-3.6-flash', 'gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-3-flash-preview'].filter((m, i, a) => a.indexOf(m) === i);
+const MODELO = process.env.GEMINI_MODEL || 'gemini-3.5-flash';
+const ALTERNATIVAS = ['gemini-3.6-flash', 'gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-3-flash-preview'];
 const MAX_POR_HORA = 20; // limite simples por IP (melhor esforço, em memória)
 const usos = new Map();
-const VERSAO = 'v3-diagnostico';
+const VERSAO = 'v4';
 
 const PROMPT = `És um assistente que ajuda um técnico português de segurança contra incêndio (SCIE).
 Analisa esta planta de arquitetura e extrai APENAS o que estiver visível ou escrito (cotas, quadros de áreas, legendas, cortes).
@@ -13,24 +14,26 @@ Regras: não inventes; se não conseguires ler um valor, devolve null; não indi
 Responde só em JSON, em português de Portugal, com este formato:
 {
  "altura_m": {"valor": number|null, "confianca": "alta"|"media"|"baixa", "evidencia": "onde leste isto"},
- "pisos_abaixo": {"valor": number|null, "confianca": "...", "evidencia": "..."},
- "pisos_acima": {"valor": number|null, "confianca": "...", "evidencia": "..."},
- "area_bruta_m2": {"valor": number|null, "confianca": "...", "evidencia": "..."},
- "efetivo_indicado": {"valor": number|null, "confianca": "...", "evidencia": "só se estiver escrito na planta"},
+ "pisos_abaixo": {"valor": number|null, "confianca": "alta"|"media"|"baixa", "evidencia": "..."},
+ "pisos_acima": {"valor": number|null, "confianca": "alta"|"media"|"baixa", "evidencia": "..."},
+ "area_bruta_m2": {"valor": number|null, "confianca": "alta"|"media"|"baixa", "evidencia": "..."},
+ "efetivo_indicado": {"valor": number|null, "confianca": "alta"|"media"|"baixa", "evidencia": "só se estiver escrito na planta"},
  "compartimentos": [{"nome": "...", "uso": "...", "area_m2": number|null}],
  "observacoes": ["dúvidas ou elementos que o técnico deve confirmar"]
 }`;
 
-// Diagnóstico: abra /api/ler-planta no navegador para ver a versão, se a chave existe e que modelos a conta pode usar.
+const espera = (ms) => new Promise((r) => setTimeout(r, ms));
+const URL_MODELO = (m) => `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`;
+
+// Diagnóstico: abrir /api/ler-planta no navegador mostra a versão e que modelos respondem agora.
 async function diagnostico(res) {
   const chave = process.env.GEMINI_API_KEY;
   const saida = { versao: VERSAO, chaveConfigurada: Boolean(chave), modeloConfigurado: MODELO };
   if (!chave) return res.status(200).json(saida);
-  const candidatos = [MODELO, 'gemini-3.5-flash', 'gemini-3.6-flash', 'gemini-3.7-flash', 'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-flash-latest', 'gemini-flash-lite-latest', 'gemini-3-flash-preview']
-    .filter((m, i, a) => a.indexOf(m) === i);
+  const candidatos = [MODELO, ...ALTERNATIVAS].filter((m, i, a) => a.indexOf(m) === i);
   const testar = async (m) => {
     try {
-      const t = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`, {
+      const t = await fetch(URL_MODELO(m), {
         method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave },
         body: JSON.stringify({ contents: [{ parts: [{ text: 'Responde apenas: ok' }] }] })
       });
@@ -41,7 +44,7 @@ async function diagnostico(res) {
   return res.status(200).json(saida);
 }
 
-export default async function handler(req, res) {
+async function tratar(req, res) {
   res.setHeader('Cache-Control', 'no-store');
   if (req.method === 'GET') return diagnostico(res);
   if (req.method !== 'POST') return res.status(405).json({ erro: 'Método não permitido.' });
@@ -50,41 +53,53 @@ export default async function handler(req, res) {
 
   const ip = (req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'desconhecido';
   const agora = Date.now();
-  const recentes = (usos.get(ip) || []).filter((t) => agora - t < 3600_000);
+  const recentes = (usos.get(ip) || []).filter((t) => agora - t < 3600000);
   if (recentes.length >= MAX_POR_HORA) return res.status(429).json({ erro: 'Limite de leituras por hora atingido. Tente mais tarde.' });
   usos.set(ip, [...recentes, agora]);
 
-  const { mime, dados, piso } = req.body || {};
+  let corpoPedido = req.body;
+  if (typeof corpoPedido === 'string') { try { corpoPedido = JSON.parse(corpoPedido); } catch { corpoPedido = {}; } }
+  const { mime, dados, piso } = corpoPedido || {};
   if (!['image/jpeg', 'image/png', 'application/pdf'].includes(mime) || typeof dados !== 'string' || dados.length < 100) {
     return res.status(400).json({ erro: 'Ficheiro inválido (use PNG, JPG ou PDF).' });
   }
-  if (dados.length > 4_000_000) return res.status(413).json({ erro: 'Ficheiro demasiado grande. Reduza a imagem ou o PDF.' });
+  if (dados.length > 4000000) return res.status(413).json({ erro: 'Ficheiro demasiado grande. Reduza a imagem ou o PDF.' });
 
   const corpo = JSON.stringify({
     contents: [{ parts: [{ text: PROMPT + (piso ? `\nEsta planta corresponde ao piso: ${String(piso).slice(0, 40)}.` : '') }, { inline_data: { mime_type: mime, data: dados } }] }],
     generationConfig: { temperature: 0, responseMimeType: 'application/json' }
   });
-  const modelos = [MODELO, ...(process.env.GEMINI_FALLBACK ? [process.env.GEMINI_FALLBACK] : ['gemini-3.5-flash-lite'])].filter((m, i, a) => a.indexOf(m) === i);
-  const espera = (ms) => new Promise((r) => setTimeout(r, ms));
+
+  const modelos = [MODELO, ...ALTERNATIVAS].filter((m, i, a) => a.indexOf(m) === i);
   let ultimo = null;
   for (const modelo of modelos) {
     for (let tentativa = 0; tentativa < 2; tentativa += 1) {
       try {
-        const r = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelo}:generateContent`, {
-          method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave }, body: corpo
-        });
+        const r = await fetch(URL_MODELO(modelo), { method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave }, body: corpo });
         if (r.ok) {
           const j = await r.json();
-          const texto = j?.candidates?.[0]?.content?.parts?.map((p) => p.text).join('') || '';
-          try { return res.status(200).json(JSON.parse(texto.replace(/^```json\s*|```\s*$/g, ''))); } catch { return res.status(502).json({ erro: 'Não foi possível interpretar a resposta da IA.' }); }
+          const texto = (j && j.candidates && j.candidates[0] && j.candidates[0].content && j.candidates[0].content.parts || []).map((p) => p.text || '').join('');
+          try {
+            const obj = JSON.parse(texto.replace(/^```json\s*|```\s*$/g, ''));
+            obj.modeloUsado = modelo;
+            return res.status(200).json(obj);
+          } catch { return res.status(502).json({ erro: 'Não foi possível interpretar a resposta da IA.' }); }
         }
-        const detalhe = (await r.json().catch(() => ({})))?.error?.message || '';
-        ultimo = { codigo: r.status, modelo, detalhe: String(detalhe).slice(0, 200) };
+        const j = await r.json().catch(() => ({}));
+        ultimo = { codigo: r.status, modelo, detalhe: String((j && j.error && j.error.message) || '').slice(0, 200) };
         if (r.status === 429) return res.status(429).json({ erro: 'A quota gratuita da IA esgotou-se por agora. Tente daqui a uns minutos.' });
-        if (r.status === 404 || r.status === 400 || r.status === 403) break; // não adianta repetir; tenta o outro modelo
-        await espera(1500);
-      } catch { ultimo = { codigo: 0, modelo, detalhe: 'falha de ligação' }; await espera(1000); }
+        if ([400, 403, 404].includes(r.status)) break;
+        await espera(1200);
+      } catch (e) { ultimo = { codigo: 0, modelo, detalhe: 'falha de ligação' }; await espera(800); }
     }
   }
-  return res.status(502).json({ erro: `A IA está indisponível (${ultimo?.codigo || 'sem resposta'}, modelo ${ultimo?.modelo}). ${ultimo?.detalhe || ''} Tente novamente dentro de instantes.`.trim() });
+  return res.status(502).json({ erro: `A IA está indisponível (${ultimo ? ultimo.codigo : 'sem resposta'}, modelo ${ultimo ? ultimo.modelo : '-'}). ${ultimo ? ultimo.detalhe : ''} Tente novamente dentro de instantes.` });
+}
+
+export default async function handler(req, res) {
+  try { return await tratar(req, res); }
+  catch (e) {
+    console.error('ler-planta', e);
+    return res.status(500).json({ erro: `Erro interno da função: ${String((e && e.message) || e).slice(0, 200)}` });
+  }
 }
