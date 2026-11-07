@@ -26,19 +26,18 @@ async function diagnostico(res) {
   const chave = process.env.GEMINI_API_KEY;
   const saida = { versao: VERSAO, chaveConfigurada: Boolean(chave), modeloConfigurado: MODELO };
   if (!chave) return res.status(200).json(saida);
-  try {
-    const l = await fetch('https://generativelanguage.googleapis.com/v1beta/models?pageSize=200', { headers: { 'x-goog-api-key': chave } });
-    saida.listaModelosStatus = l.status;
-    const j = await l.json().catch(() => ({}));
-    if (l.ok) saida.modelosFlash = (j.models || []).filter((m) => (m.supportedGenerationMethods || []).includes('generateContent') && /flash/i.test(m.name)).map((m) => m.name.replace('models/', ''));
-    else saida.erroLista = j?.error?.message;
-    const t = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${MODELO}:generateContent`, {
-      method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave },
-      body: JSON.stringify({ contents: [{ parts: [{ text: 'Responde apenas: ok' }] }] })
-    });
-    saida.testeModeloConfigurado = t.status;
-    if (!t.ok) saida.erroTeste = (await t.json().catch(() => ({})))?.error?.message;
-  } catch (e) { saida.falha = String(e.message || e); }
+  const candidatos = [MODELO, 'gemini-3.5-flash', 'gemini-3.6-flash', 'gemini-3.7-flash', 'gemini-2.5-flash', 'gemini-2.5-flash-lite', 'gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-flash-latest', 'gemini-flash-lite-latest', 'gemini-3-flash-preview']
+    .filter((m, i, a) => a.indexOf(m) === i);
+  const testar = async (m) => {
+    try {
+      const t = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': chave },
+        body: JSON.stringify({ contents: [{ parts: [{ text: 'Responde apenas: ok' }] }] })
+      });
+      return [m, t.status];
+    } catch { return [m, 'falha']; }
+  };
+  saida.testes = Object.fromEntries(await Promise.all(candidatos.map(testar)));
   return res.status(200).json(saida);
 }
 
