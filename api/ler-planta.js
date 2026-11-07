@@ -2,7 +2,7 @@
 // A chave nunca vai para o navegador: fica na variável de ambiente GEMINI_API_KEY.
 // A IA não decide categorias de risco; isso é feito pelas regras em public/js/classificar.js.
 
-const MODELO = process.env.GEMINI_MODEL || 'gemini-3.8-flash';
+  const modelos = [MODELO, 'gemini-3.5-flash', 'gemini-3.6-flash', 'gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-3-flash-preview'].filter((m, i, a) => a.indexOf(m) === i);
 const MAX_POR_HORA = 20; // limite simples por IP (melhor esforço, em memória)
 const usos = new Map();
 const VERSAO = 'v3-diagnostico';
