@@ -1,5 +1,6 @@
 import { classificar, ROTULOS } from './classificar.js';
 import * as C from './carga.js';
+import { htmlFicha, ligarFicha } from './ficha.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -12,7 +13,7 @@ let REGRAS; let Q1; let Q2;
 const estado = {
   passo: 1, ut: null, arLivre: false, soArmazens: false, temLocaisDE: null, saidaDireta: null,
   params: {}, carga: null, cargaOrigem: '', plantas: [], leitura: null,
-  modo: 'dados', area: '', mat: [{}], act: [{}], qIndicado: '', compartimentos: [], ultimo: null
+  modo: 'dados', ficha: {}, area: '', mat: [{}], act: [{}], qIndicado: '', compartimentos: [], ultimo: null
 };
 
 /* ---------- arranque ---------- */
@@ -33,11 +34,12 @@ function irPara(n) {
   if (n === 2) renderPasso2();
   if (n === 3) renderPasso3();
   if (n === 4) renderPasso4();
+  if (n === 5) renderPasso5();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function renderPassos() {
-  const nomes = [['Dados e plantas', 'Identificação e parâmetros'], ['Leitura da planta', 'Sugestões da IA'], ['Resultado', 'Categoria de risco'], ['Projeto', 'Carga de incêndio e próximos passos']];
+  const nomes = [['Dados e plantas', 'Identificação e parâmetros'], ['Leitura da planta', 'Sugestões da IA'], ['Resultado', 'Categoria de risco'], ['Projeto', 'Carga de incêndio e próximos passos'], ['Ficha', 'Rascunho para imprimir']];
   $('#passos').innerHTML = nomes.map(([t, s], i) => `<button type="button" class="passo ${i + 1 < estado.passo ? 'feito' : ''}" data-ir="${i + 1}" ${i + 1 === estado.passo ? 'aria-current="step"' : ''}><span class="n">${i + 1 < estado.passo ? '✓' : i + 1}</span><span><b>${t}</b><small>${s}</small></span></button>`).join('');
 }
 document.addEventListener('click', (e) => {
@@ -281,6 +283,18 @@ function renderPasso3() {
 }
 $('#btn-imprimir').addEventListener('click', () => window.print());
 
+/* ---------- passo 5: ficha de segurança ---------- */
+let fichaLigada = false;
+function renderPasso5() {
+  const el = $('#p5-conteudo');
+  if (!estado.ut) { el.innerHTML = '<div class="info">Escolha primeiro a utilização-tipo no passo 1.</div>'; return; }
+  let r;
+  try { r = classificar(entradaDoEstado(), REGRAS); } catch (err) { el.innerHTML = `<div class="erro"><b>Ainda não é possível preencher a ficha.</b><br>${esc(err.message)}</div><button class="btn" data-ir="1">Completar no passo 1</button>`; return; }
+  el.innerHTML = htmlFicha({ r, ut: REGRAS.ut[estado.ut], utId: estado.ut, estado, nome: $('#nome').value.trim(), concelho: $('#concelho').value.trim(), morada: $('#morada').value.trim(), v: estado.ficha });
+  if (!fichaLigada) { ligarFicha(el, estado.ficha); fichaLigada = true; }
+}
+$('#btn-imprimir-ficha').addEventListener('click', () => window.print());
+
 /* ---------- passo 4: projeto e carga de incêndio ---------- */
 function renderPasso4() {
   const el = $('#p4-conteudo');
@@ -300,9 +314,9 @@ function htmlProximosPassos() {
   const r = ultimoResultado ?? (() => { try { return estado.ut ? classificar(entradaDoEstado(), REGRAS) : null; } catch { return null; } })();
   if (!r) return '';
   const itens = r.conclusao === 'ficha'
-    ? ['Elaborar a ficha de segurança contra incêndio (art. 17.º, n.º 2 do DL 220/2008). O modelo consta dos anexos do diploma — confirme o anexo e a versão em vigor.', 'Guardar o resumo desta classificação (passo 3 → «Imprimir / guardar PDF») para o processo.']
+    ? ['Elaborar a ficha de segurança contra incêndio (art. 17.º, n.º 2 do DL 220/2008). O modelo é definido pela ANEPC (Anexo V do diploma): confirme o modelo exigido pela câmara.', 'Guardar o resumo desta classificação (passo 3 → «Imprimir / guardar PDF») para o processo.']
     : ['Elaborar o projeto de especialidade de SCIE (art. 17.º, n.º 1 do DL 220/2008), por técnico habilitado nos termos da lei. Elementos mínimos: ver os anexos do diploma e a Portaria n.º 1532/2008 (confirmar a versão em vigor).', 'Guardar o resumo desta classificação (passo 3 → «Imprimir / guardar PDF») para a memória descritiva.', 'Confirmar os parâmetros assinalados como «por verificar» antes de submeter.'];
-  return `<div class="cartao"><h2>Próximos passos — ${r.conclusao === 'ficha' ? 'ficha de segurança' : 'projeto de SCIE'} (${r.categoria}.ª categoria)</h2><ul style="margin:0; padding-left:20px">${itens.map((i) => `<li style="margin-bottom:6px">${esc(i)}</li>`).join('')}</ul></div>`;
+  return `<div class="cartao"><h2>Próximos passos — ${r.conclusao === 'ficha' ? 'ficha de segurança' : 'projeto de SCIE'} (${r.categoria}.ª categoria)</h2><ul style="margin:0; padding-left:20px">${itens.map((i) => `<li style="margin-bottom:6px">${esc(i)}</li>`).join('')}</ul>${r.conclusao === 'ficha' ? '<p style="margin:14px 0 0"><button class="btn" type="button" data-ir="5">Preencher a ficha de segurança →</button></p>' : ''}</div>`;
 }
 
 const opcoesNivel = (sel, vazio) => `${vazio ? '<option value="">Escolher</option>' : ''}${NIVEIS.map(([v, t]) => `<option value="${v}" ${sel === v ? 'selected' : ''}>${t}</option>`).join('')}`;
