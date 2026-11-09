@@ -4,7 +4,7 @@
   "ut": {
     "I": {
       "nome": "Habitacionais",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": true,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro I",
       "parametros": ["altura", "pisosAbaixo"],
@@ -16,7 +16,7 @@
     },
     "II": {
       "nome": "Estacionamentos",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro II",
       "parametros": ["altura", "areaBruta", "pisosAbaixo"],
@@ -29,7 +29,7 @@
     },
     "III": {
       "nome": "Administrativos",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": true,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro III",
       "parametros": ["altura", "efetivo"],
@@ -41,7 +41,7 @@
     },
     "IV": {
       "nome": "Escolares",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": true,
       "fonte": "DL 220/2008, art. 12.º e 13.º, n.º 3, e Anexo III, Quadro IV",
       "parametros": ["altura", "efetivo", "efetivoLocaisDE"],
@@ -68,7 +68,7 @@
     },
     "VI": {
       "nome": "Espetáculos e reuniões públicas",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro V",
       "parametros": ["altura", "pisosAbaixo", "efetivo"],
@@ -81,7 +81,7 @@
     },
     "VII": {
       "nome": "Hoteleiros e restauração",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro VI (coluna de saídas diretas acrescentada pela Lei 123/2019)",
       "parametros": ["altura", "efetivo", "efetivoLocaisDE"],
@@ -94,7 +94,7 @@
     },
     "VIII": {
       "nome": "Comerciais e gares de transportes",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro VII",
       "parametros": ["altura", "pisosAbaixo", "efetivo"],
@@ -106,7 +106,7 @@
     },
     "IX": {
       "nome": "Desportivos e de lazer",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro V",
       "parametros": ["altura", "pisosAbaixo", "efetivo"],
@@ -119,7 +119,7 @@
     },
     "X": {
       "nome": "Museus e galerias de arte",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro VIII",
       "parametros": ["altura", "efetivo"],
@@ -131,7 +131,7 @@
     },
     "XI": {
       "nome": "Bibliotecas e arquivos",
-      "verificacao": "divergencia",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro IX",
       "parametros": ["altura", "pisosAbaixo", "efetivo", "carga"],
@@ -149,7 +149,7 @@
     },
     "XII": {
       "nome": "Industriais, oficinas e armazéns",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": true,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro X",
       "parametros": ["carga", "pisosAbaixo"],
