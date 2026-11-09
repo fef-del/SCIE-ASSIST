@@ -55,7 +55,7 @@
     },
     "V": {
       "nome": "Hospitalares e lares de idosos",
-      "verificacao": "por_verificar",
+      "verificacao": "verificada",
       "prioridade": false,
       "fonte": "DL 220/2008, art. 12.º e Anexo III, Quadro IV",
       "parametros": ["altura", "efetivo", "efetivoLocaisDE"],
