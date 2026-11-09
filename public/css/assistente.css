@@ -1,0 +1,26 @@
+/* Assistente virtual — Capitão */
+#assistente { position: fixed; right: 18px; bottom: 18px; z-index: 50; font-family: "IBM Plex Sans", system-ui, sans-serif; }
+#assistente .pixel { image-rendering: pixelated; image-rendering: crisp-edges; }
+.as-botao { display: flex; align-items: center; gap: 10px; border: 0; background: none; cursor: pointer; padding: 0; }
+.as-botao img { width: 72px; height: 72px; filter: drop-shadow(0 3px 6px rgba(0,0,0,.25)); }
+.as-balao { background: #fff; border: 1px solid #A9B5C2; border-radius: 10px; padding: 8px 12px; font-size: 13.5px; font-weight: 600; color: #1F4E79; box-shadow: 0 3px 10px rgba(0,0,0,.12); }
+.as-painel { width: min(380px, calc(100vw - 24px)); height: min(560px, calc(100vh - 100px)); background: #fff; border: 1px solid #A9B5C2; border-radius: 10px; box-shadow: 0 10px 32px rgba(0,0,0,.25); display: flex; flex-direction: column; overflow: hidden; }
+.as-topo { background: #1F4E79; color: #fff; display: flex; align-items: center; gap: 10px; padding: 8px 12px; }
+.as-topo img { width: 44px; height: 44px; background: #EAF1F8; border-radius: 6px; }
+.as-topo b { display: block; font-size: 15px; } .as-topo span { font-size: 12px; opacity: .85; }
+.as-topo button { margin-left: auto; border: 0; background: none; color: #fff; font-size: 22px; cursor: pointer; line-height: 1; }
+.as-msgs { flex: 1; overflow-y: auto; padding: 12px; background: #F4F6F8; display: flex; flex-direction: column; gap: 8px; }
+.as-msg { max-width: 88%; padding: 8px 11px; border-radius: 10px; font-size: 14px; line-height: 1.45; word-wrap: break-word; }
+.as-msg.bot { background: #fff; border: 1px solid #D5DCE4; align-self: flex-start; }
+.as-msg.eu { background: #1F4E79; color: #fff; align-self: flex-end; }
+.as-msg.erro { background: #FEE2E2; border: 1px solid #B91C1C; color: #7f1d1d; align-self: flex-start; }
+.as-msg ul { margin: 4px 0; padding-left: 18px; }
+.as-chips { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 12px 8px; background: #F4F6F8; }
+.as-chips button { border: 1px solid #A9B5C2; background: #fff; border-radius: 99px; padding: 5px 11px; font-size: 12.5px; cursor: pointer; color: #1F4E79; }
+.as-chips button:hover { background: #E3EDF6; }
+.as-form { display: flex; gap: 6px; padding: 8px; border-top: 1px solid #D5DCE4; background: #fff; }
+.as-form input { flex: 1; height: 40px; border: 1px solid #A9B5C2; border-radius: 6px; padding: 0 10px; font: inherit; }
+.as-form button { height: 40px; border: 0; border-radius: 6px; background: #1F4E79; color: #fff; padding: 0 14px; font-weight: 600; cursor: pointer; }
+.as-form button:disabled { opacity: .5; cursor: not-allowed; }
+.as-rodape { font-size: 11.5px; color: #5B6877; padding: 0 10px 8px; background: #fff; }
+@media print { #assistente { display: none !important; } }
