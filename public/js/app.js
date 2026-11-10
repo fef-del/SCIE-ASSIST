@@ -1,7 +1,7 @@
 import { classificar, ROTULOS } from './classificar.js';
 import * as C from './carga.js';
 import { lerPdf } from './pdf.js';
-import { htmlFicha, ligarFicha } from './ficha.js';
+import { htmlFicha, ligarFicha, valoresIniciais } from './ficha.js';
 
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];
@@ -40,7 +40,7 @@ function irPara(n) {
 }
 
 function renderPassos() {
-  const nomes = [['Dados e plantas', 'Identificação e parâmetros'], ['Leitura da planta', 'Sugestões da IA'], ['Resultado', 'Categoria de risco'], ['Projeto', 'Carga de incêndio e próximos passos'], ['Ficha', 'Rascunho para imprimir']];
+  const nomes = [['Dados e plantas', 'Identificação e parâmetros'], ['Leitura da planta', 'Sugestões da IA'], ['Resultado', 'Categoria de risco'], ['Projeto', 'Carga de incêndio e próximos passos'], ['Ficha', 'Modelo oficial ANEPC']];
   $('#passos').innerHTML = nomes.map(([t, s], i) => `<button type="button" class="passo ${i + 1 < estado.passo ? 'feito' : ''}" data-ir="${i + 1}" ${i + 1 === estado.passo ? 'aria-current="step"' : ''}><span class="n">${i + 1 < estado.passo ? '✓' : i + 1}</span><span><b>${t}</b><small>${s}</small></span></button>`).join('');
 }
 document.addEventListener('click', (e) => {
@@ -303,10 +303,12 @@ function renderPasso5() {
   if (!estado.ut) { el.innerHTML = '<div class="info">Escolha primeiro a utilização-tipo no passo 1.</div>'; return; }
   let r;
   try { r = classificar(entradaDoEstado(), REGRAS); } catch (err) { el.innerHTML = `<div class="erro"><b>Ainda não é possível preencher a ficha.</b><br>${esc(err.message)}</div><button class="btn" data-ir="1">Completar no passo 1</button>`; return; }
-  el.innerHTML = htmlFicha({ r, ut: REGRAS.ut[estado.ut], utId: estado.ut, estado, nome: $('#nome').value.trim(), concelho: $('#concelho').value.trim(), morada: $('#morada').value.trim(), v: estado.ficha });
-  if (!fichaLigada) { ligarFicha(el, estado.ficha); fichaLigada = true; }
+  const ctx = { r, ut: REGRAS.ut[estado.ut], utId: estado.ut, estado, nome: $('#nome').value.trim(), concelho: $('#concelho').value.trim(), morada: $('#morada').value.trim(), v: estado.ficha };
+  if (estado.fichaUT !== estado.ut) { estado.ficha = {}; estado.fichaUT = estado.ut; ctx.v = estado.ficha; }
+  for (const [k, x] of Object.entries(valoresIniciais(ctx))) if (!(k in estado.ficha)) estado.ficha[k] = x;
+  el.innerHTML = htmlFicha(ctx);
+  if (!fichaLigada) { ligarFicha(el, () => estado.ficha); fichaLigada = true; }
 }
-$('#btn-imprimir-ficha').addEventListener('click', () => window.print());
 
 /* ---------- passo 4: projeto e carga de incêndio ---------- */
 function renderPasso4() {
