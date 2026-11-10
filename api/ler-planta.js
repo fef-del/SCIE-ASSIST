@@ -6,11 +6,11 @@ const MODELO = process.env.GEMINI_MODEL || 'gemini-3.5-flash';
 const ALTERNATIVAS = ['gemini-3.6-flash', 'gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-3-flash-preview'];
 const MAX_POR_HORA = 20; // limite simples por IP (melhor esforço, em memória)
 const usos = new Map();
-const VERSAO = 'v4';
+const VERSAO = 'v5';
 
 const PROMPT = `És um assistente que ajuda um técnico português de segurança contra incêndio (SCIE).
 Analisa esta planta de arquitetura e extrai APENAS o que estiver visível ou escrito (cotas, quadros de áreas, legendas, cortes).
-Regras: não inventes; se não conseguires ler um valor, devolve null; não indiques categorias de risco nem utilizações-tipo.
+Se houver quadro de áreas, soma as áreas dos compartimentos e usa-a como área bruta com confiança baixa, explicando na evidência. Se houver cotas de nível ou alçados, calcula a altura. Em 'evidencia' diz sempre porque não leste, quando devolves null. Regras: não inventes; se não conseguires ler um valor, devolve null; não indiques categorias de risco nem utilizações-tipo.
 Responde só em JSON, em português de Portugal, com este formato:
 {
  "altura_m": {"valor": number|null, "confianca": "alta"|"media"|"baixa", "evidencia": "onde leste isto"},
@@ -59,14 +59,16 @@ async function tratar(req, res) {
 
   let corpoPedido = req.body;
   if (typeof corpoPedido === 'string') { try { corpoPedido = JSON.parse(corpoPedido); } catch { corpoPedido = {}; } }
-  const { mime, dados, piso } = corpoPedido || {};
-  if (!['image/jpeg', 'image/png', 'application/pdf'].includes(mime) || typeof dados !== 'string' || dados.length < 100) {
-    return res.status(400).json({ erro: 'Ficheiro inválido (use PNG, JPG ou PDF).' });
-  }
-  if (dados.length > 4000000) return res.status(413).json({ erro: 'Ficheiro demasiado grande. Reduza a imagem ou o PDF.' });
+  const { mime, dados, piso, paginas, texto } = corpoPedido || {};
+  let imagens = [];
+  if (Array.isArray(paginas) && paginas.length) imagens = paginas.slice(0, 5).filter((p) => p && ['image/jpeg', 'image/png'].includes(p.mime) && typeof p.dados === 'string' && p.dados.length > 100);
+  else if (['image/jpeg', 'image/png', 'application/pdf'].includes(mime) && typeof dados === 'string' && dados.length >= 100) imagens = [{ mime, dados }];
+  if (!imagens.length) return res.status(400).json({ erro: 'Ficheiro inválido (use PNG, JPG ou PDF).' });
+  if (imagens.reduce((s, p) => s + p.dados.length, 0) > 4200000) return res.status(413).json({ erro: 'Ficheiro demasiado grande. Reduza a imagem ou o PDF.' });
+  const textoPdf = typeof texto === 'string' ? texto.slice(0, 14000) : '';
 
   const corpo = JSON.stringify({
-    contents: [{ parts: [{ text: PROMPT + (piso ? `\nEsta planta corresponde ao piso: ${String(piso).slice(0, 40)}.` : '') }, { inline_data: { mime_type: mime, data: dados } }] }],
+    contents: [{ parts: [{ text: PROMPT + (piso ? `\nEsta planta corresponde ao piso: ${String(piso).slice(0, 40)}.` : '') + (textoPdf ? `\n\nTEXTO EXTRAÍDO DO PDF (cotas, legendas e quadros, mais fiável do que a imagem para números; linhas por posição):\n${textoPdf}` : '') + (imagens.length > 1 ? `\n\nSeguem ${imagens.length} páginas do mesmo ficheiro.` : '') }, ...imagens.map((p) => ({ inline_data: { mime_type: p.mime, data: p.dados } }))] }],
     generationConfig: { temperature: 0, responseMimeType: 'application/json' }
   });
 

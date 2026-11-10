@@ -1,5 +1,6 @@
 import { classificar, ROTULOS } from './classificar.js';
 import * as C from './carga.js';
+import { lerPdf } from './pdf.js';
 import { htmlFicha, ligarFicha } from './ficha.js';
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -163,10 +164,6 @@ function renderPasso2() {
 
 function lerComoBase64(ficheiro) {
   return new Promise((resolve, reject) => {
-    if (ficheiro.type === 'application/pdf') {
-      if (ficheiro.size > 3 * 1024 * 1024) return reject(new Error(`«${ficheiro.name}» tem mais de 3 MB. Exporte a planta em imagem (PNG/JPG) ou reduza o PDF.`));
-      const r = new FileReader(); r.onload = () => resolve({ mime: ficheiro.type, dados: String(r.result).split(',')[1] }); r.onerror = reject; r.readAsDataURL(ficheiro); return;
-    }
     const url = URL.createObjectURL(ficheiro); const img = new Image();
     img.onload = () => {
       const max = 1800; const k = Math.min(1, max / Math.max(img.width, img.height));
@@ -185,11 +182,23 @@ $('#btn-ler').addEventListener('click', async () => {
   const leituras = [];
   try {
     for (const p of estado.plantas) {
-      const { mime, dados } = await lerComoBase64(p.ficheiro);
-      const r = await fetch('/api/ler-planta', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ nome: p.ficheiro.name, piso: p.piso, mime, dados }) });
+      let pedido; let nota = '';
+      if (p.ficheiro.type === 'application/pdf') {
+        estadoEl.textContent = `A preparar «${p.ficheiro.name}» (PDF)…`;
+        if (p.ficheiro.size > 40 * 1024 * 1024) throw new Error(`«${p.ficheiro.name}» tem mais de 40 MB. Exporte só a planta pretendida.`);
+        const pdf = await lerPdf(p.ficheiro);
+        pedido = { paginas: pdf.paginas, texto: pdf.texto, nome: p.ficheiro.name, piso: p.piso };
+        if (pdf.totalPaginas > pdf.usadas) nota = `Só foram lidas as primeiras ${pdf.usadas} de ${pdf.totalPaginas} páginas.`;
+        if (!pdf.texto) nota += ' O PDF não tem texto selecionável; a leitura baseia-se só na imagem.';
+      } else {
+        const { mime, dados } = await lerComoBase64(p.ficheiro);
+        pedido = { nome: p.ficheiro.name, piso: p.piso, mime, dados };
+      }
+      estadoEl.textContent = `A ler «${p.ficheiro.name}» com IA… pode demorar alguns segundos.`;
+      const r = await fetch('/api/ler-planta', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(pedido) });
       const corpo = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(corpo.erro || (r.status === 404 ? 'A leitura por IA não está disponível nesta versão da aplicação.' : `Erro ${r.status}`));
-      leituras.push({ ficheiro: p.ficheiro.name, piso: p.piso, ...corpo });
+      leituras.push({ ficheiro: p.ficheiro.name, piso: p.piso, nota: nota.trim(), ...corpo });
     }
     estado.leitura = leituras; estadoEl.textContent = 'Leitura concluída. Reveja cada sugestão.';
   } catch (err) {
@@ -207,11 +216,15 @@ function renderLeitura() {
   estado.leitura.forEach((l, i) => {
     h += `<div class="cartao"><h2>${esc(l.ficheiro)}${l.piso ? ' · ' + esc(l.piso) : ''}</h2><table><thead><tr><th>Campo</th><th class="num">Valor sugerido</th><th>Confiança</th><th>Onde foi lido</th><th></th></tr></thead><tbody>`;
     for (const [k, p, rot] of CAMPOS_IA) {
-      const c = l[k]; if (!c || c.valor === null || c.valor === undefined) continue;
+      const c = l[k];
+      if (!c || c.valor === null || c.valor === undefined) { h += `<tr><td>${rot}</td><td class="num mono">—</td><td><span class="conf baixa">não lido</span></td><td class="peq">${esc((c && c.evidencia) || 'A IA não encontrou este valor nesta planta.')}</td><td></td></tr>`; continue; }
       h += `<tr><td>${rot}</td><td class="num mono">${esc(c.valor)}</td><td><span class="conf ${esc(c.confianca)}">${esc(c.confianca || '?')}</span></td><td class="peq">${esc(c.evidencia || '')}</td>
         <td><button type="button" class="btn sec peq" data-aplicar="${i}:${p}:${esc(c.valor)}">Aplicar</button></td></tr>`;
     }
     h += '</tbody></table>';
+    if (l.nota) h += `<p class="peq mudo">${esc(l.nota)}</p>`;
+    if (l.compartimentos?.length) h += `<h3 style="margin:14px 0 6px;font-size:14px">Compartimentos identificados</h3><table><thead><tr><th>Nome</th><th>Uso</th><th class="num">Área (m²)</th></tr></thead><tbody>${l.compartimentos.map((c) => `<tr><td>${esc(c.nome)}</td><td>${esc(c.uso || '')}</td><td class="num mono">${c.area_m2 ?? '—'}</td></tr>`).join('')}</tbody></table>`;
+    if (!CAMPOS_IA.some(([k]) => l[k] && l[k].valor != null) && !l.compartimentos?.length) h += '<div class="info" style="margin-top:10px">A IA não conseguiu ler valores nesta planta. Acontece com plantas sem cotas nem quadro de áreas legíveis, ou PDF de desenho vetorial. Experimente exportar a planta em PNG/JPG com boa resolução, incluindo o quadro de áreas, ou preencha os valores no passo 1.</div>';
     if (l.observacoes?.length) h += `<p class="peq mudo" style="margin-bottom:0"><b>Observações:</b> ${l.observacoes.map(esc).join(' · ')}</p>`;
     h += '</div>';
   });
